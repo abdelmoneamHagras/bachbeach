@@ -1,0 +1,316 @@
+/* latin-ext */
+@font-face {
+  font-family: "Fredericka the Great";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/FrederickatheGreat-Regular.ttf);
+}
+@font-face {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+.para-img {
+  top: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 10px;
+  width: 200px;
+  text-align: center;
+  border: 2px dotted white;
+  background: #223a47;
+  border-radius: 5px;
+}
+
+.title-fredreka {
+  font-family: "Fredericka the Great", cursive;
+}
+
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+.component-img-circle {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+
+.component-main-img-circle-1 {
+  position: relative;
+  width: 250px;
+}
+.component-main-img-circle-1 .co-para {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  font-weight: bold;
+  color: white;
+  padding: 6px 0px;
+  width: 125px;
+  text-align: center;
+  border: 2px dotted white;
+}
+
+.component-main-btn {
+  color: white;
+  width: 160px;
+  text-align: left;
+  position: relative;
+  border: 2px dotted white;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px 12px;
+}
+.component-main-btn .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.component-main-title .title {
+  font-size: 55px;
+  padding-left: 90px;
+}
+.component-main-title .sub-title {
+  font-size: 40px;
+  line-height: 10px;
+}
+
+.active {
+  color: #f27257 !important;
+}
+
+.sec-1 .container {
+  padding: 50px 0px;
+  width: 950px;
+}
+.sec-1 .container .co {
+  color: #f27257;
+}
+.sec-1 .container .d-flex {
+  padding: 20px 0 0 0;
+}
+.sec-1 .container .text-center {
+  border: 2px solid #fbdbd5;
+  font-size: 30px;
+  border-radius: 5px;
+  width: 363px;
+}
+.sec-1 .container .co-icon {
+  font-size: 29px;
+  padding: 63px 0 0 0;
+  text-align: center;
+}
+
+.sec-img-1 {
+  height: 500px;
+  position: relative;
+}
+.sec-img-1 .title-1 {
+  position: absolute;
+  top: 70%;
+  position: absolute;
+  font-size: 60px;
+  margin: auto;
+  left: 150px;
+}
+
+.sec-p .container {
+  padding: 70px 0px 30px;
+  text-align: center;
+}
+
+.sec-3 .container {
+  padding-bottom: 100px;
+  width: 1050px;
+}
+.sec-3 .container .col-8 .ph-1 {
+  width: 600px;
+  color: #a0cadb;
+}
+.sec-3 .container .col-8 .ph-2 {
+  width: 688px;
+}
+
+.sec-4 {
+  padding: 105px 0;
+}
+.sec-4 .co-main-img {
+  position: relative;
+  width: 300px;
+}
+.sec-4 .co-main-img .para-1 {
+  position: absolute;
+  top: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 6px 0px;
+  width: 125px;
+  text-align: center;
+  border: 2px dotted white;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f27257;
+}
+.sec-4 .co-main-img .component-img-circle {
+  width: 300px;
+  height: 300px;
+}
+.sec-4 .co-main-img .para-2 {
+  position: absolute;
+  bottom: -5px;
+  font-weight: bold;
+  color: white;
+  padding: 6px 0px;
+  width: 125px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #5da0aa;
+}
+.sec-4 .col-5 {
+  padding-top: 90px;
+}
+.sec-4 .col-5 h2 {
+  color: #f27257;
+}
+
+.sec-5 .container {
+  padding: 10px 0px 50px;
+  margin-bottom: 200px;
+}
+.sec-5 .container .col-7 {
+  padding-top: 130px;
+}
+.sec-5 .container .col-7 .bd-text {
+  border: 2px dotted white;
+  background: #f27257;
+  color: white;
+  width: 550px;
+  height: 225px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.sec-6 .container {
+  margin-bottom: 200px;
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+  padding: 90px 0 20px;
+}
+.sec-6 .container input {
+  outline: none;
+  border: 2px dotted #5da0aa;
+  padding: 5px 10px;
+  border-radius: 3px;
+  width: 250px;
+}
+.sec-6 .container button {
+  padding: 5px 10px;
+  border: 2px dotted #5da0aa;
+  background: #f27257;
+  color: white;
+  border-radius: 3px;
+  width: 150px;
+}
+
+.sec-7 .container {
+  margin-bottom: 60px;
+}
+
+.sec-8 .container {
+  width: 700px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.sec-8 .container .cont {
+  border: 2px dotted #ffb5a1;
+  border-radius: 10px;
+  padding: 20px;
+}
+.sec-8 .container .cont .cont-co {
+  margin-left: 0;
+  font-size: 30px;
+}
+.sec-8 .container .cont .cont-co .title-fredreka {
+  color: #f27257;
+}
+.sec-8 .container .cont .cont-co .cont-a {
+  color: white;
+  background: #223a47;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.sec-8 .container .cont .cont-1 {
+  display: flex;
+  border-bottom: 2px dotted #5da0aa;
+}
+.sec-8 .container .cont .cont-1 .co-icon {
+  color: #5da0aa;
+}
+.sec-8 .container .cont .cont-1 .cont-1-a {
+  margin-left: 40px;
+}
+.sec-8 .container .cont-icon {
+  margin-top: 20px;
+  width: 750px;
+  font-size: 20px;
+}
+.sec-8 .container .cont-icon .icon {
+  color: #f27257;
+}
+
+.sec-9 .container .hd-main {
+  margin-bottom: 73px;
+  width: 534px;
+  margin-left: 148px;
+  padding-top: 30px;
+}
+.sec-9 .container .row {
+  margin: auto;
+  width: 650px;
+  text-align: center;
+}
+.sec-9 .container .row input {
+  width: 300px;
+  padding: 5px 20px;
+  margin: 5px;
+  outline: none;
+  border: 2px dotted #5da0aa;
+  border-radius: 3px;
+}
+.sec-9 .container .row textarea {
+  margin-top: 5px;
+  width: 300px;
+  color: white;
+  outline: none;
+  border: 2px dotted #5da0aa;
+  border-radius: 3px;
+}
+.sec-9 .container .row button {
+  width: 300px;
+  padding: 5px 20px;
+  margin: 5px;
+  border: 2px dotted #5da0aa;
+  background: #f27257;
+  color: white;
+  border-radius: 3px;
+}
+
+.foot {
+  background: #223a47;
+  padding: 10px 0;
+}
+.foot .container {
+  width: 800px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

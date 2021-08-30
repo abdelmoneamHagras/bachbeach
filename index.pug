@@ -1,0 +1,203 @@
+include inc/mixin.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css", integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l", crossorigin="anonymous")
+        link(rel="stylesheet", href="assets/css/style.css")
+
+
+
+        title Document
+    body 
+
+
+        
+
+            
+        
+
+
+
+    header
+        section(class="sec-1")
+            .container
+                .row
+                    .col-4
+                        img(src="./scratch/wine-cups.png", alt="", style='width:auto;height:120px;')
+                    .col-5
+                        div.d-flex
+                            p 
+                                i.fas.fa-phone-alt.co 
+                                | 
+                                | 08 9791 6575
+                            p.ml-3
+                                i.fas.fa-map.co
+                                | 
+                                | Lot 757,Oceam Drive,Bunbury
+                        div.text-center
+                            span.title-fredreka
+                                | Mike a Reservation
+                    .col-3
+                        div.co-icon
+                            a(href="#")
+                                i.fab.fa-facebook-f.co
+                            a(href="#") 
+                                i.fab.fa-instagram.co
+            nav.navbar.navbar-expand-lg.navbar-light
+              button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExample08", aria-controls="navbarsExample08", aria-expanded="false", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+              .collapse.navbar-collapse.justify-content-md-center#navbarsExample08
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link.active( href="#") HOME
+                    -let menuBtn = ['DINING','LUNCH','FUNCTIONS','BREAKFAST','WHAT\'S ON','RESERVATION','ABOUT','CONTACT']
+                    -let menuActive = ''
+                    each val,index in menuBtn
+                        -if (index == 0){menuActive = 'active'}else{menuActive = ''}
+                        li.nav-item(class=menuActive)
+                            a.nav-link(href="#")=val
+        hr
+    section.sec-img-1(style="background-image: url(./scratch/home-banner.png);background-repeat: no-repeat; background-position: center center; background-size: cover; width: 100%;")
+        .continer 
+            h2(class="title-1").title-fredreka
+                | A Dining Experience
+    section(class="sec-2")
+        .container
+            .row
+                -
+                    let x = [
+                        ['rgb(242, 114, 87)','rgb(93, 160, 170)'],
+                        ['rgb(93, 160, 170)','rgb(34, 58, 71)'],
+                        ['rgb(34, 58, 71)','rgb(242, 114, 87)'],
+                    ]
+                each val in x
+                    .col-4
+                        +mainImgeCircle1(val[0],val[1])
+    section(class="sec-p")
+        .container
+            +mainHeading('rgb(255, 181, 161)','Hello World','The Backbeach Eating House')
+        hr
+    section(class="sec-3")
+        .container
+            .row
+                .col-2
+                .col-8
+                    p.ph-1
+                        | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
+                    p.ph-2.title-fredreka
+                        | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
+                .col-2
+                    +mainBtn('rgb(34, 58, 71)',true)
+    section.sec-4(style="background-image: url(./scratch/news-bg.png); background-repeat-y: no-repeat;")
+        .container
+            .row
+                .col-4
+                    .co-main-img
+                        p.title-fredreka(class="para-1")
+                            | whats On
+                        +imgCircle('rgb(34, 58, 71)')
+                        p.title-fredreka(class="para-2")
+                            | 10.0.0.1
+                .col-5
+                    h2.title-fredreka
+                        | Mother's Day
+                    p 
+                        | Join us to celebrate your mum this Mother's Day.Breakfast and lunch are preity full but we're taking dinner bookings so yo...
+                    +mainBtn('rgb(34, 58, 71)',false)
+                .col-3
+    section.sec-5(style="background-image: url(./scratch/testimonials.png);background-position: center center;background-repeat: no-repeat;background-size: cover;height: 600px;")
+        .container
+            .row
+                .col-5
+                .col-7
+                    h2.title-fredreka
+                        | Happy Customers 
+                    div.bd-text
+                        | Ah! What a place. i could go have breakfast every single day and not get tired by the views. the staff are very kind and helpful, and the food is AMAZING! A MUSi visit place if you're visiting Bunbury!
+                        hr(style="color:white")
+                        | Saad Uido
+    section.sec-6(style="background-image: url(./scratch/subscribe-bg.png);background-position: center center;background-repeat: no-repeat;background-size: cover;")
+        .container
+            div(style="margin-bottom: 40px")
+                +mainHeading-2('rgb(93, 160, 170)','Sign Up','white','Subscribe to our email newsletter')
+            form.row
+                .col-auto
+                    input(type="text", placeholder="you Name")
+                .col-auto
+                    input(type="email", placeholder="you Email")
+                .col-auto
+                    button.mb-3(type="submit") subscribe
+            
+    section(class="sec-7")
+        .container
+            +mainHeading('rgb(255, 181, 161)','Sociale','Follow us in facebook & instagram')
+    hr
+    section(class="sec-8")
+        .container
+            .cont
+                .row
+                    .col-12
+                        .row.cont-co
+                            col-auto
+                                a(href="#").mr-3.cont-a
+                                    i.fab.fa-facebook-f
+                            col-auto
+                                        span.title-fredreka
+                                            | Mike a Reservation
+                    .col-6 
+                        img(src="./scratch/call-to-action-1.png", alt="")
+                    .col-6
+                        .div.cont-1 
+                            span 
+                                i.fas.fa-calendar-alt.co-icon
+                                span 
+                                    | Posted 31 Jan 2020
+                            span.cont-1-a
+                                i.fas.fa-thumbs-up.co-icon
+                                span 
+                                    | 24 Likes
+                        p 
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        p.para-img.title-fredreka
+                            | Read in facebook
+            .cont-icon
+                a.m-3(href="#")
+                    i.fab.fa-instagram.icon 
+                span.title-fredreka 
+                    | @Backew'ldld's
+    section.sec-9(style="background-image: url(./scratch/news-bg.png); background-position: center center; width: 100%;")
+        .container
+            div.hd-main
+                +mainHeading('rgb(242, 114, 87)','contact','send us a message below')
+            .row
+                .col-6 
+                    input(type="name", placeholder="you Name")
+                    br
+                    input(type="phone", placeholder="you Phone")
+                    br
+                    input(type="email", placeholder="you Email")
+                .col-6
+                    textarea(name="message" , value="you Message", rows="3") 
+                    br
+                    button(type="submit") Send
+                p(style="margin-top: 40px") 
+                    | @Copyright sit amet, consectetur adipisicing //sit amet, consectetur 
+    footer.foot
+        .container
+            .row
+                .col-1 
+                    img(src="./scratch/glass-cheers.png", alt="")
+                .col-11
+                    b
+                        | Lorem ipsum dolor sit amet consecteturamet consectetur adipisicing elit. In, necessit:
+                    p
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, praesentium neque. Odio facere modi adipisci, at aut error laborum. Modi aut deserunt eos natus explicabo vitae, animi laboriosam voluptates voluptate?
+
+
+        script(src="https://kit.fontawesome.com/1713315dbb.js", crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js", integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns", crossorigin="anonymous")
