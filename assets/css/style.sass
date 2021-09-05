@@ -28,7 +28,10 @@
     font-family: 'Fredericka the Great', cursive
 .font-pacifico
     font-family: 'Pacifico', cursive
-    
+a
+    &:hover
+        color: #0056b3
+        text-decoration: none !important   
 // components
 $sizeComponentImgCircle : 250px
 .component-img-circle
@@ -49,15 +52,16 @@ $sizeComponentImgCircle : 250px
         width: 125px
         text-align: center
         border: 2px dotted white
-.component-main-btn
+.component-main-lnk
     color: white
     width: 160px
     text-align: left
-    position: relative
+    position: absolute
     border: 2px dotted white
     font-size: 20px
     border-radius: 5px
     padding: 5px 12px
+    text-decoration: none
     .icon
         position: absolute
         right: 10px
@@ -72,9 +76,9 @@ $sizeComponentImgCircle : 250px
         line-height: 10px
 .active
     color: rgb(242, 114, 87) !important
+// #bottom 
+           
         
-        
-
 
 
 
@@ -82,14 +86,14 @@ $sizeComponentImgCircle : 250px
     
 
 .sec-1
-    .container
-        padding: 50px 0px
-        width: 950px
+    border-bottom: 1px solid #b1b1b1
+    .cont-1
+        padding: 50px 0px 0 
         .co
             color: rgb(242, 114, 87)
-        .d-flex
+        .phone-icon
             padding: 20px 0 0 0
-        .text-center
+        .title-p1
             border: 2px solid rgb(251, 219, 213)
             font-size: 30px
             border-radius: 5px
@@ -98,7 +102,14 @@ $sizeComponentImgCircle : 250px
             font-size: 29px
             padding: 63px 0 0 0
             text-align: center
+        .co-nav
+            color: black
 .sec-img-1
+    background-image: url(../img/home-banner.png)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    width: 100%
     height: 500px
     position: relative
     .title-1
@@ -108,23 +119,41 @@ $sizeComponentImgCircle : 250px
         font-size: 60px
         margin: auto
         left: 150px
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 120px
+        background: red
+        bottom: 0
+        background: linear-gradient(180deg, transparent, white)
 .sec-p
-    .container
+    border-bottom: 1px solid #b1b1b1
+    .welcome-p
         padding: 70px 0px 30px
         text-align: center
 .sec-3
-    .container
-        padding-bottom: 100px
-        width: 1050px
-        .col-8
+    .pead-1
+        padding: 35px 0 90px
+        .co-ph
             .ph-1
                 width: 600px
                 color: rgb(160, 202, 219)
             .ph-2
                 width: 688px
 .sec-4
+    background-image: url(../img/news-bg.png)
+    background-repeat-y: no-repeat
     $sizeComponentImgCircle : 300px
-    padding: 105px 0
+    padding: 105px 0 0 0
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 120px
+        background: red
+        margin-top: 180px
+        background: linear-gradient(180deg, transparent, white)
     .co-main-img
         position: relative
         width: $sizeComponentImgCircle
@@ -154,15 +183,54 @@ $sizeComponentImgCircle : 250px
             left: 50%
             transform: translateX(-50%)
             background: rgb(93, 160, 170)
-    .col-5
+    .hp-main
         padding-top: 90px
-        h2
+        .hp-main-1
             color: rgb(242, 114, 87)
+.sec-c4
+    background-image: url(../img/about-background.png)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    position: relative
+    &::after
+        content: url(../img/Group.png)
+        position: absolute
+        top: 0
+        position: absolute
+        width: 100%
+        left: 0
+        right: 0
+    &::before
+        content: url(../img/Vector.png)
+        position: absolute 
+        width: 100%
+        bottom: 0
+        position: absolute
+        width: 100%
+        left: 0
+        right: 0
+    .h-title
+        padding: 200px 0 51px
+    .h-read
+        padding: 35px 0
+        .h-read-1
+            width: 600px
+            color: #a0cadb
+        .h-read-2
+            color: white
+    .h-img
+        padding: 35px 
 .sec-5
-    .container
+    .co-bd
+        background-image: url(../img/testimonials.png)
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+        height: 600px
         padding: 10px 0px 50px
         margin-bottom: 200px
-        .col-7
+        .bd-prag
             padding-top: 130px
             .bd-text
                 border: 2px dotted white
@@ -171,21 +239,29 @@ $sizeComponentImgCircle : 250px
                 width: 550px
                 height: 225px
                 border-radius: 10px
-                padding: 30px
+                padding: 40px 30px
+                .bd-text-1
+                    border-bottom: 1px solid white
+                    padding-bottom: 30px
 .sec-6
-    .container
-        margin-bottom: 200px
+    background-image: url(../img/subscribe-bg.png)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    .cont-input
+        margin-bottom: 100px
         justify-content: center
         text-align: center
-        width: 800px
         padding: 90px 0 20px
-        input
+        .h-cen
+            justify-content: center
+        .sub-sn
             outline: none
             border: 2px dotted rgb(93, 160, 170)
             padding: 5px 10px
             border-radius: 3px
             width: 250px
-        button
+        .sub-btn
             padding: 5px 10px
             border: 2px dotted rgb(93, 160, 170)
             background: rgb(242, 114, 87)
@@ -193,79 +269,91 @@ $sizeComponentImgCircle : 250px
             border-radius: 3px
             width: 150px
 .sec-7
-    .container
-        margin-bottom: 60px
+    border-bottom: 1px solid #b1b1b1
+    .hd-title-7
+        margin-bottom: 40px
 .sec-8
-    .container
-        width: 700px
-        margin: auto
-        margin-bottom: 100px
-        .cont
-            border: 2px dotted rgb(255, 181, 161)
-            border-radius: 10px
-            padding: 20px
-            .cont-co
-                margin-left: 0
-                font-size: 30px
-                .title-fredreka
-                    color: rgb(242, 114, 87)
-                .cont-a
-                    color: white 
-                    background: rgb(34, 58, 71)
-                    padding: 0 10px
-                    border-radius: 5px
-            .cont-1
-                display: flex
-                border-bottom: 2px dotted rgb(93, 160, 170)
-                .co-icon
-                    color: rgb(93, 160, 170)
-                .cont-1-a
-                    margin-left: 40px
-        .cont-icon
-            margin-top: 20px
-            width: 750px
-            font-size: 20px
-            .icon
+    padding: 40px 0 90px
+    .cont
+        border: 2px dotted rgb(255, 181, 161)
+        border-radius: 10px
+        padding: 35px
+        .cont-co
+            margin-left: 15px
+            font-size: 30px
+            color: rgb(242, 114, 87)
+            padding: 0 0 10px
+            .cont-a
+                color: white 
+                background: rgb(34, 58, 71)
+                padding: 0 10px
+                border-radius: 5px
+            .co-reqest
                 color: rgb(242, 114, 87)
+                font-size: 35px
+        img
+            width: 320px
+            height: auto
+        .cont-1
+            display: flex
+            border-bottom: 2px dotted rgb(93, 160, 170)
+            padding-bottom: 15px
+            .co-icon
+                color: rgb(93, 160, 170)
+            .cont-1-a
+                margin-left: 40px
+        .cont-2
+            padding-top: 20px
+    .cont-icon
+        margin-top: 35px
+        font-size: 20px
+        .icon
+            color: rgb(242, 114, 87)
 .sec-9
-    .container
+    background-image: url(../img/news-bg.png)
+    background-position: center center
+    width: 100%
+    background-size: contain
+    .co-sign
+        padding: 60px 0
         .hd-main
             margin-bottom: 73px
             width: 534px
             margin-left: 148px
             padding-top: 30px
-        .row
+        .co-input
             margin: auto
             width: 650px
             text-align: center
-            input
+            .sn-inpt
                 width: 300px
-                padding: 5px 20px
-                margin: 5px
+                padding: 10px 20px
+                margin: 15px
                 outline: none
                 border: 2px dotted rgb(93, 160, 170)
                 border-radius: 3px
-            textarea
-                margin-top: 5px
+            .sn-tery
+                margin-top: 15px
                 width: 300px
                 color: white
                 outline: none
                 border: 2px dotted rgb(93, 160, 170)
                 border-radius: 3px
-            button
+            .send-btn
                 width: 300px
-                padding: 5px 20px
-                margin: 5px
+                margin-top: -10px
                 border: 2px dotted rgb(93, 160, 170)
                 background: rgb(242, 114, 87)
                 color: white
                 border-radius: 3px
 .foot
     background: rgb(34, 58, 71)
-    padding: 10px 0
-    .container
-        width: 800px
+    padding: 45px 0 20px
+    .co-foot
         color: white
+        .icon-foot
+            padding: 20px 0 0
+            width: 60px
 
 
 

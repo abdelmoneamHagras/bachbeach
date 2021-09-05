@@ -1,13 +1,13 @@
-mixin imgCircle(x)
+mixin imgCircle(x,y="call-to-action-1.png")
     .co-img.component-img-circle(style="border: 20px solid " + x)
-        img(src="https://via.placeholder.com/200", alt="" class="w-100")
+        img(src='./assets/img/'+y, alt="" class="w-100")
 mixin mainImgeCircle1(x,y)
     .co-main-img.component-main-img-circle-1
         +imgCircle(x)
         p(class="co-para" style="background-color: " + y)
             | Dining Menu
 mixin mainBtn(x,y)
-    button(class="component-main-btn title-fredreka" style="background-color: " + x)
+    a(href="#" class="component-main-lnk title-fredreka hvr-icon-wobble-horizontal" style="background-color: " + x)
         | Read 
         if y
             br
