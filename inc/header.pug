@@ -1,0 +1,66 @@
+
+header
+    section(class="sec-1")
+        .container
+            div.cont-1
+                div(class='hagras-nav d-block d-lg-none')
+                    nav.navbar.navbar-expand-lg
+                        a.navbar-brand(href="#")
+                            i.fas.fa-phone-alt.res-icon.mr-2
+                            span.res-tell
+                                | 08 9791 6575
+                        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExample08", aria-controls="navbarsExample08", aria-expanded="false", aria-label="Toggle navigation")
+                            span.mr-2
+                                | MENU
+                            i.fas.fa-bars.res-menu
+                        .collapse.navbar-collapse.justify-content-md-center#navbarsExample08
+                            ul.navbar-nav
+                                li.nav-item.mr-3
+                                    a.nav-link.active( href="#" class="hvr-pop") HOME
+                                -let menuBtn1 = ['DINING','LUNCH','FUNCTIONS','BREAKFAST','WHAT\'S ON','RESERVATION','ABOUT','CONTACT']
+                                -let menuActive1 = ''
+                                each val,index in menuBtn1
+                                    -if (index == 0){menuActive1 = 'active'}else{menuActive1 = ''}
+                                    li.nav-item.mr-3(class=menuActive1)
+                                        a.co-nav.nav-link(href="#" class="hvr-bounce-in")=val
+                div.hs-ph
+                    .row
+                        .col-lg-1
+                        .col-lg-3
+                            div(class="text-center text-lg-auto ")
+                                img.hs-ph-img(src="./assets/img//wine-cups.png", alt="")
+                        .col-lg-5
+                            div
+                                div.phone-icon(class="d-none d-lg-flex")
+                                    p 
+                                        i.fas.fa-phone-alt.co 
+                                        | 
+                                        | 08 9791 6575
+                                    p.ml-3
+                                        i.fas.fa-map.co
+                                        | 
+                                        | Lot 757,Oceam Drive,Bunbury
+                                div.title-p1.text-center.mx-auto
+                                    span.title-fredreka
+                                        | Mike a Reservation
+                        .col-lg-2
+                            div.co-icon(class="d-none d-lg-block")
+                                a(href="#")
+                                    i.fab.fa-facebook-f.co
+                                a(href="#") 
+                                    i.fab.fa-instagram.co
+                        .col-lg-1
+                div(class='hagras-nav d-none d-lg-block')
+                    nav.navbar.navbar-expand-lg
+                        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExample08", aria-controls="navbarsExample08", aria-expanded="false", aria-label="Toggle navigation")
+                            <i class="fas fa-bars"></i>
+                        .collapse.navbar-collapse.justify-content-md-center#navbarsExample08
+                            ul.navbar-nav
+                                li.nav-item.mr-3
+                                    a.nav-link.active( href="#" class="hvr-pop") HOME
+                                -let menuBtn2 = ['DINING','LUNCH','FUNCTIONS','BREAKFAST','WHAT\'S ON','RESERVATION','ABOUT','CONTACT']
+                                -let menuActive2 = ''
+                                each val,index in menuBtn2
+                                    -if (index == 0){menuActive2 = 'active'}else{menuActive2 = ''}
+                                    li.nav-item(class=menuActive2).mr-3
+                                        a.co-nav.nav-link(href="#" class="hvr-bounce-in")=val

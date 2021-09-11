@@ -1,264 +1,179 @@
-include inc/mixin.pug
-
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css", integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l", crossorigin="anonymous")
-        link(rel="stylesheet", href="assets/css/hover-min.css")
-        link(rel="stylesheet", href="assets/css/animate.css")
-        link(rel="stylesheet", href="assets/css/style.css")
-        
-
-
-        title Document
-    body 
-
-
-        
-
-            
-        
-
-
-
-        header
-            section(class="sec-1")
-                .container
-                    div.cont-1
-                        div
-                            .row
-                                .col-1
-                                .col-3
-                                    img(src="./assets/img//wine-cups.png", alt="", style='width:auto;height:120px;')
-                                .col-5
-                                    div.phone-icon.d-flex
-                                        p 
-                                            i.fas.fa-phone-alt.co 
-                                            | 
-                                            | 08 9791 6575
-                                        p.ml-3
-                                            i.fas.fa-map.co
-                                            | 
-                                            | Lot 757,Oceam Drive,Bunbury
-                                    div.title-p1.text-center
-                                        span.title-fredreka
-                                            | Mike a Reservation
-                                .col-2
-                                    div.co-icon
-                                        a(href="#")
-                                            i.fab.fa-facebook-f.co
-                                        a(href="#") 
-                                            i.fab.fa-instagram.co
-                                .col-1
-                        div
-                            nav.navbar.navbar-expand-lg
-                              button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExample08", aria-controls="navbarsExample08", aria-expanded="false", aria-label="Toggle navigation")
-                                span.navbar-toggler-icon
-                              .collapse.navbar-collapse.justify-content-md-center#navbarsExample08
-                                ul.navbar-nav
-                                    li.nav-item.mr-3
-                                        a.nav-link.active( href="#" class="hvr-pop") HOME
-                                    -let menuBtn = ['DINING','LUNCH','FUNCTIONS','BREAKFAST','WHAT\'S ON','RESERVATION','ABOUT','CONTACT']
-                                    -let menuActive = ''
-                                    each val,index in menuBtn
-                                        -if (index == 0){menuActive = 'active'}else{menuActive = ''}
-                                        li.nav-item(class=menuActive).mr-3
-                                            a.co-nav.nav-link(href="#" class="hvr-bounce-in")=val
-        section.sec-img-1(class="wow bounceInUp" data-wow-duration="1s")
-            .continer 
-                h2(class="title-1").title-fredreka
-                    | A Dining Experience
-        section(class="sec-2 wow lightSpeedIn" data-wow-duration="2s" data-wow-delay="2s")
-            .container
+extends inc/layout.pug
+block content
+    section.sec-img-1(class="wow bounceInUp" data-wow-duration="1s")
+        .continer 
+            h2(class="title-1").title-fredreka
+                | A Dining Experience
+    section(class="sec-2 wow lightSpeedIn" data-wow-duration="2s" data-wow-delay="2s")
+        .container
+            .row
+                .col-12.col-md-1.col-lg-12
+                -
+                    let x = [
+                        ['rgb(242, 114, 87)','rgb(93, 160, 170)'],
+                        ['rgb(93, 160, 170)','rgb(34, 58, 71)'],
+                        ['rgb(34, 58, 71)','rgb(242, 114, 87)'],
+                    ]
+                each val in x
+                    .col-12.col-md-3.col-lg-4
+                        +mainImgeCircle1(val[0],val[1])
+                .col-12.col-md-2.col-lg-12
+    section(class="sec-p")
+        .container
+            div.welcome-p
+                +mainHeading('rgb(255, 181, 161)','Welcome to','The Backbeach Eating House')
+    section(class="sec-3")
+        .container
+            div.pead-1
                 .row
-                    .col-1
-                    -
-                        let x = [
-                            ['rgb(242, 114, 87)','rgb(93, 160, 170)'],
-                            ['rgb(93, 160, 170)','rgb(34, 58, 71)'],
-                            ['rgb(34, 58, 71)','rgb(242, 114, 87)'],
-                        ]
-                    each val in x
-                        .col-3
-                            +mainImgeCircle1(val[0],val[1])
-                    .col-2
-        section(class="sec-p")
-            .container
-                div.welcome-p
-                    +mainHeading('rgb(255, 181, 161)','Hello World','The Backbeach Eating House')
-        section(class="sec-3")
-            .container
-                div.pead-1
-                    .row
-                        .col-1
-                        .col-8
-                            div.co-ph
-                                p.ph-1
-                                    | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
-                                p.ph-2.title-fredreka
-                                    | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
-                        .col-1
-                            +mainBtn('rgb(34, 58, 71)',true).hvr-icon-wobble-horizontal
-        section.sec-4
-            .container
-                .row
-                    .col-2
-                    .col-4
-                        div.co-main-img(class="wow rollIn" data-wow-duration="2s" data-wow-delay="0.25s")
-                            p.title-fredreka(class="para-1")
-                                | whats On
-                            +imgCircle('rgb(34, 58, 71)','news-placeholder.png')
-                            p.title-fredreka(class="para-2")
-                                | 10.0.0.1
-                    .col-5
-                        div.hp-main 
-                            h2.hp-main-1.title-fredreka
-                                | Mother's Day
-                            p 
-                                | Join us to celebrate your mum this Mother's Day.Breakfast and lunch are preity full but we're taking dinner bookings so yo...
-                            +mainBtn('rgb(34, 58, 71)',false)
-                    .col-1
-        section.sec-c4
-            .container
-                div.h-title
-                    +mainHeading-2('rgb(93, 160, 170)','Served breah','white','Subscribe to our email newsletter')
-                div.h-read 
-                    .row
-                        .col-1
-                        .col-8
-                            p.h-read-1.title-fredreka
+                    .col-sm-12.col-lg-1
+                    .col-sm-12.col-lg-8
+                        div.co-ph
+                            p.ph-1
                                 | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
-                            p.h-read-2.title-fredreka
+                            p.ph-2.title-fredreka
                                 | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
-                        .col-1
-                            +mainBtn('rgb(34, 58, 71)',true)
-                div(class="h-img wow bounceInUp")
-                    .row 
-                        .col-2 
-                        -
-                            let e = [
-                                ['rgb(242, 114, 87)'],
-                                ['rgb(93, 160, 170)'],
-                                ['rgb(34, 58, 71)'],
-                            ]
-                        each val in e
-                            .col-3
-                                +imgCircle(val[0])
-                        .col-1
-        section.sec-5
-            .container
-                div.co-bd
-                    .row
-                        .col-5
-                        .col-7
-                            div.bd-prag
-                                h2.title-fredreka
-                                    | Happy Customers 
-                                div(class ="bd-text wow bounceInRight" data-wow-duration="2s")
-                                    p.bd-text-1
-                                        | Ah! What a place. i could go have breakfast every single day and not get tired by the views. the staff are very kind and helpful, and the food is AMAZING! A MUSi visit place if you're visiting Bunbury!
-                                    b
-                                        | Saad Uido
-        section.sec-6
-            .container
-                div.cont-input
-                    div(style="margin-bottom: 40px")
-                        +mainHeading-2('rgb(93, 160, 170)','Sign Up','white','Subscribe to our email newsletter')
-                    div 
-                        form.row
-                            .col-auto
-                                input.sub-sn.form-control(type="text", placeholder="you Name")
-                            .col-auto
-                                input.sub-sn.form-control(type="email", placeholder="you Email")
-                            .col-auto
-                                button.sub-btn.btn.mb-3(type="submit") subscribe
-        section(class="sec-7")
-            .container
-                div.hd-title-7
-                    +mainHeading('rgb(255, 181, 161)','Sociale','Follow us in facebook & instagram')
-        section(class="sec-8")
-            .container
+                    .col-sm-12.col-lg-1
+                        +mainBtn('rgb(34, 58, 71)',true).hvr-icon-wobble-horizontal
+    section.sec-4
+        .container
+            .row
+                .col-sm-12.col-md-6.col-lg-2
+                .col-sm-12.col-md-6.col-lg-4
+                    div.co-main-img(class="wow rollIn" data-wow-duration="2s" data-wow-delay="0.25s")
+                        p.title-fredreka(class="para-1")
+                            | whats On
+                        +imgCircle('rgb(34, 58, 71)','news-placeholder.png')
+                        p.title-fredreka(class="para-2")
+                            | 10.0.0.1
+                .col-sm-12.col-md-6.col-lg-5
+                    div.hp-main 
+                        h2.hp-main-1.title-fredreka
+                            | Mother's Day
+                        p 
+                            | Join us to celebrate your mum this Mother's Day.Breakfast and lunch are preity full but we're taking dinner bookings so yo...
+                        +mainBtn('rgb(34, 58, 71)',false)
+                .col-1
+    section.sec-c4
+        .container
+            div.h-title
+                +mainHeading-2('rgb(93, 160, 170)','Served breah','white','from the paddock to the plate')
+            div.h-read 
                 .row
-                    .col-2
-                    .col-8
-                        div.cont
-                            .row
-                                .col-12
-                                    div.cont-co
-                                        .row
-                                            col-auto
-                                                a(href="#").mr-3.cont-a
-                                                    i.fab.fa-facebook-f
-                                            col-auto
-                                                        span.co-reqest.title-fredreka
-                                                            | What's new on facebook
-                                .col-6 
-                                    div.co-img
-                                    img(src="./assets/img/call-to-action-1.png", alt="")
-                                .col-6
-                                    div.cont-1 
-                                        span 
-                                            i.fas.fa-calendar-alt.co-icon
-                                            span 
-                                                | Posted 31 Jan 2020
-                                        span.cont-1-a
-                                            i.fas.fa-thumbs-up.co-icon
-                                            span 
-                                                | 24 Likes
-                                    div.cont-2
-                                        p 
-                                            | Ckek out the view (and the dolphins, they're out there today!) Duis posuerejusto sed tellus congue, a convallis metus molestie. Quisque ante feugiat velit ullam corper venenatis congue.
-                                        p.para-img.title-fredreka
-                                            | Read in facebook
-                    .col-2
-                    .col-2
-                    .col-7
-                        div.cont-icon
-                            a.m-3(href="#")
-                                i.fab.fa-instagram.icon 
-                            span.title-fredreka 
-                                | @Backew'ldld's
-                    .col-3
-        section.sec-9
-            .container
-                div.co-sign
-                    div.hd-main
-                        +mainHeading('rgb(242, 114, 87)','contact','send us a message below')
-                    div.co-input
+                    .col-sm-12.col-md-1
+                    .col-sm-12.col-md-8
+                        p.h-read-1.title-fredreka
+                            | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
+                        p.h-read-2.title-fredreka
+                            | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
+                    .col-sm-12.col-md-3
+                        +mainBtn('rgb(242, 114, 87)',true)
+            div(class="d-sm-none d-lg-flex h-img wow bounceInUp")
+                .row 
+                    .col-2 
+                    -
+                        let e = [
+                            ['rgb(242, 114, 87)'],
+                            ['rgb(93, 160, 170)'],
+                            ['rgb(34, 58, 71)'],
+                        ]
+                    each val in e
+                        .col-3
+                            +imgCircle(val[0])
+                    .col-1
+    section.sec-5
+        .container
+            div.co-bd
+                .row
+                    .col-lg-5.col-sm-12
+                    .col-lg-7.col-sm-12
+                        div.bd-prag
+                            h2.title-fredreka
+                                | Happy Customers 
+                            div(class ="bd-text wow bounceInRight" data-wow-duration="2s")
+                                p.bd-text-1
+                                    | Ah! What a place. i could go have breakfast every single day and not get tired by the views. the staff are very kind and helpful, and the food is AMAZING! A MUSi visit place if you're visiting Bunbury!
+                                b
+                                    | Saad Uido
+    section.sec-6
+        .container
+            div.cont-input
+                div.cont-sub(class="mb-5")
+                    +mainHeading-2('rgb(93, 160, 170)','Sign Up','white','Subscribe to our email newsletter')
+                div 
+                    form.row
+                        .col-sm-12.col-md-auto
+                            input.sub-sn.form-control(type="text", placeholder="you Name")
+                        .col-sm-12.col-md-auto
+                            input.sub-sn.form-control(type="email", placeholder="you Email")
+                        .col-sm-12.col-md-auto
+                            button.sub-btn.btn.mb-3(type="submit") subscribe
+    section(class="sec-7")
+        .container
+            div.hd-title-7
+                +mainHeading('rgb(255, 181, 161)','Sociale','Follow us in facebook & instagram')
+    section(class="sec-8")
+        .container
+            .row
+                .col-sm-12.col-md-2
+                .col-sm-12.col-md-8
+                    div.cont
                         .row
-                            .col-6 
-                                input.sn-inpt.form-control(type="name", placeholder="you Name")
-                                input.sn-inpt.form-control(type="phone", placeholder="you Phone")
-                                input.sn-inpt.form-control(type="email", placeholder="you Email")
-                            .col-6
-                                textarea.sn-tery.form-control(name="message" , value="you Message", rows="3") 
-                                br
-                                button.send-btn.btn(type="submit") Send
-                        div.h-copy.mt-4
-                            .row
-                                .col-auto.ml-3
-                                    i.far.fa-copyright 
-                                .col-auto   
+                            .col-12
+                                div.cont-co
+                                    .row
+                                        .col-sm-2.col-md-auto
+                                            a(href="#").mr-3.cont-a
+                                                i.fab.fa-facebook-f
+                                        .col-sm-10.col-md-auto
+                                                    span.co-reqest.title-fredreka
+                                                        | What's new on facebook
+                            .col-sm-12.col-md-6 
+                                div
+                                    img.co-img(src="./assets/img/call-to-action-1.png", alt="")
+                            .col-sm-12.col-md-6
+                                div.cont-1 
+                                    span 
+                                        i.fas.fa-calendar-alt.co-icon
+                                        span 
+                                            | Posted 31 Jan 2020
+                                    span.cont-1-a
+                                        i.fas.fa-thumbs-up.co-icon
+                                        span 
+                                            | 24 Likes
+                                div.cont-2
                                     p 
-                                        | Copyright sit amet, consectetur adipisicing //sit amet, consectetur 
-        footer.foot
-            .container
-                div.co-foot
+                                        | Ckek out the view (and the dolphins, they're out there today!) Duis posuerejusto sed tellus congue, a convallis metus molestie. Quisque ante feugiat velit ullam corper venenatis congue.
+                                    p.para-img.title-fredreka
+                                        | Read in facebook
+                .col-sm-12.col-md-2
+                .col-sm-12.col-md-2
+                .col-sm-12.col-md-7
+                    div.cont-icon
+                        a.m-3(href="#")
+                            i.fab.fa-instagram.icon 
+                        span.title-fredreka 
+                            | @Backew'ldld's
+                .col-sm-12.col-md-3
+    section.sec-9
+        .container
+            div.co-sign
+                div.hd-main
+                    +mainHeading('rgb(242, 114, 87)','contact','send us a message below')
+                div.co-input
                     .row
-                        .col-1 
-                            img.icon-foot(src="./assets/img/glass-cheers.png", alt="")
-                        .col-10
-                            b
-                                | WARNING,Under the Liquor Control Act 1998, it is an offence:
-                            p
-                                | To sell or supply liquor to a person under the age of 18 years on a licenced or regulated premises; or for a person under the age of 18 years to purchase, liquor on a licenced or regulated premises.
-
-
-        script(src="https://kit.fontawesome.com/1713315dbb.js", crossorigin="anonymous")
-        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")
-        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js", integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns", crossorigin="anonymous")
-        script(src="assets/js/wow.min.js") 
-        script(src="assets/js/script.js") 
+                        .col-sm-12.col-lg-6 
+                            input.sn-inpt.form-control(type="name", placeholder="you Name")
+                            input.sn-inpt.form-control(type="phone", placeholder="you Phone")
+                            input.sn-inpt.form-control(type="email", placeholder="you Email")
+                        .col-sm-12.col-lg-6
+                            textarea.sn-tery.form-control(name="message" , value="you Message", rows="3") 
+                            br
+                            button.send-btn.btn(type="submit") Send
+                    div.h-copy.mt-4
+                        .row
+                            .col-sm-2.col-md-auto.ml-3
+                                i.far.fa-copyright 
+                            .col-sm-10.col-md-auto   
+                                p 
+                                    | Copyright sit amet, consectetur adipisicing //sit amet, consectetur 
