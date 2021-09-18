@@ -7,7 +7,7 @@ block content
     section(class="sec-2 wow lightSpeedIn" data-wow-duration="2s" data-wow-delay="1s")
         .container
             .row
-                .col-12.col-md-12.col-lg-12
+                .col-12.col-md-12.col-lg-1
                 -
                     let x = [
                         ['rgb(242, 114, 87)','rgb(93, 160, 170)'],
@@ -15,9 +15,9 @@ block content
                         ['rgb(34, 58, 71)','rgb(242, 114, 87)'],
                     ]
                 each val in x
-                    .col-12.mb-3.col-md-4.col-lg-4
+                    .col-12.mb-3.col-md-4.col-lg-3
                         +mainImgeCircle1(val[0],val[1])
-                .col-12.col-md-12.col-lg-12
+                .col-12.col-md-2.col-lg-2
     section(class="sec-p")
         .container
             div.welcome-p
@@ -70,7 +70,7 @@ block content
                         +mainBtn('rgb(242, 114, 87)',true)
             div(class="d-none d-lg-flex h-img wow bounceInUp")
                 .row 
-                    .col-2 
+                    .col-2
                     -
                         let e = [
                             ['rgb(242, 114, 87)'],

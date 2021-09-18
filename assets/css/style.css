@@ -132,7 +132,7 @@ a:hover {
   color: #f27257;
 }
 .sec-1 .cont-1 .phone-icon {
-  padding: 20px 0 0 0;
+  padding: 20px 0px 0px 0px;
 }
 .sec-1 .cont-1 .title-p1 {
   border: 2px solid #fbdbd5;
@@ -173,8 +173,8 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .sec-img-1 .title-1 {
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: 0px;
     font-size: 35px;
     text-align: center;
   }
@@ -185,7 +185,7 @@ a:hover {
   width: 100%;
   height: 120px;
   background: red;
-  bottom: 0;
+  bottom: 0px;
   background: linear-gradient(180deg, transparent, white);
 }
 
@@ -194,18 +194,16 @@ a:hover {
 }
 .sec-p .welcome-p {
   padding: 70px 0px 30px;
-  text-align: center;
 }
 @media screen and (max-width: 992px) {
   .sec-p .welcome-p {
     line-height: 40px;
     margin-right: 40px;
-    text-align: start;
   }
 }
 
 .sec-3 .pead-1 {
-  padding: 35px 0 90px;
+  padding: 35px 0px 90px;
 }
 .sec-3 .pead-1 .co-ph .ph-1 {
   width: 600px;
@@ -228,7 +226,7 @@ a:hover {
 .sec-4 {
   background-image: url(../img/news-bg.png);
   background-repeat-y: no-repeat;
-  padding: 105px 0 0 0;
+  padding: 105px 0px 0px 0px;
 }
 .sec-4::before {
   content: "";
@@ -286,8 +284,8 @@ a:hover {
   background-position: center center;
   background-size: cover;
   position: relative;
-  padding: 0 0 140px;
-  margin: 150px 0;
+  padding-bottom: 140px;
+  margin: 150px 0px;
 }
 .sec-c4::after {
   content: "";
@@ -297,7 +295,7 @@ a:hover {
   height: 55px;
   position: absolute;
   width: 100%;
-  top: 0;
+  top: 0px;
 }
 .sec-c4::before {
   content: "";
@@ -308,13 +306,13 @@ a:hover {
   transform: rotatey(180deg);
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0px;
 }
 .sec-c4 .h-title {
-  padding: 200px 0 0px;
+  padding: 200px 0px 0px 0px;
 }
 .sec-c4 .h-read {
-  padding: 35px 0;
+  padding: 35px 0px;
 }
 .sec-c4 .h-read .h-read-1 {
   width: 600px;
@@ -325,7 +323,7 @@ a:hover {
   color: white;
 }
 .sec-c4 .h-img {
-  padding: 35px 0 52px;
+  padding: 35px 0px 0px 52px;
   position: absolute;
 }
 
@@ -335,7 +333,7 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  padding: 10px 0px 50px;
+  padding: 10px 0px 0px 50px;
   border-bottom: 3px dotted white;
 }
 .sec-5 .bd-prag {
@@ -371,7 +369,7 @@ a:hover {
   margin-bottom: 100px;
   justify-content: center;
   text-align: center;
-  padding: 90px 0 20px;
+  padding: 90px 0px 0px 20px;
 }
 .sec-6 .cont-input .h-cen {
   justify-content: center;
@@ -427,7 +425,7 @@ a:hover {
   margin-left: 15px;
   font-size: 30px;
   color: #f27257;
-  padding: 0 0 10px;
+  padding: 0px 0px 0px 10px;
 }
 .sec-8 .cont .cont-co .cont-a {
   color: white;
@@ -487,7 +485,7 @@ a:hover {
   background-size: contain;
 }
 .sec-9 .co-sign {
-  padding: 60px 0;
+  padding: 60px 0px;
 }
 .sec-9 .co-sign .hd-main {
   margin-bottom: 73px;
@@ -498,7 +496,7 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .sec-9 .co-sign .hd-main {
-    margin-left: 0;
+    margin-left: 0px;
   }
 }
 .sec-9 .co-sign .co-input {
@@ -513,7 +511,7 @@ a:hover {
 .sec-9 .co-sign .co-input .sn-inpt {
   width: 300px;
   padding: 10px 20px;
-  margin: 15px 0;
+  margin: 15px 0px;
   outline: none;
   border: 2px dotted #5da0aa;
   border-radius: 3px;
@@ -552,13 +550,13 @@ a:hover {
 
 .foot {
   background: #223a47;
-  padding: 45px 0 20px;
+  padding: 45px 0px 0px 20px;
 }
 .foot .co-foot {
   color: white;
 }
 .foot .co-foot .icon-foot {
-  padding: 20px 0 0;
+  padding: 20px 0px 0px 0px;
   width: 60px;
 }
 
