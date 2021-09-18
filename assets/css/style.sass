@@ -26,11 +26,11 @@ $xl: 1200px
 
     
 .para-img
-    top: 10px
     font-weight: bold
     color: white
     padding: 10px 10px
     width: 200px
+    max-width: 100%
     text-align: center
     border: 2px dotted white
     background:  rgb(34, 58, 71)  
@@ -116,19 +116,19 @@ $sizeComponentImgCircle2 : 170px
     @media screen and ( max-width:  $lg)
        border-bottom: none 
     .cont-1
+        padding: 25px 0px 0px 0px
         .res-tell
             color: black
         .res-icon
             color: rgb(242, 114, 87)
         .res-menu
             color: rgb(78, 181, 197)
-        padding: 50px 0px 0 
         @media screen and ( max-width: $lg )
-            padding: 10px 0px 0 
+            padding: 10px 0px 0px 0px 
         .hs-ph
             .hs-ph-img 
                 width:180px
-                height:auto
+                height: auto
                 max-width: 100% 
                 @media screen and ( max-width: $lg )
                     width: 400px
@@ -147,7 +147,8 @@ $sizeComponentImgCircle2 : 170px
                 width: 100%
         .co-icon    
             font-size: 29px
-            padding: 63px 0 0 0
+            align-items: flex-end
+            height: 100%
             text-align: center
         .co-nav
             color: black
@@ -216,6 +217,7 @@ $sizeComponentImgCircle2 : 170px
     .co-main-img
         position: relative
         width: $sizeComponentImgCircle
+        max-width: 100%
         .para-1
             position: absolute
             top: 10px
@@ -280,6 +282,7 @@ $sizeComponentImgCircle2 : 170px
         .h-read-1
             width: 600px
             color: #a0cadb
+            max-width: 100%
         .h-read-2
             color: white
     .h-img
@@ -403,6 +406,7 @@ $sizeComponentImgCircle2 : 170px
         .hd-main
             margin-bottom: 73px
             width: 534px
+            max-width: 100%
             margin-left: 148px
             padding-top: 30px
             @media screen and (max-width: $lg)

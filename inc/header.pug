@@ -3,7 +3,7 @@ header
     section(class="sec-1")
         .container
             div.cont-1
-                div(class='hagras-nav d-block d-lg-none')
+                div(class='hagras-nav d-flex d-lg-none')
                     nav.navbar.navbar-expand-lg
                         a.navbar-brand(href="#")
                             i.fas.fa-phone-alt.res-icon.mr-2
@@ -21,7 +21,7 @@ header
                                 -let menuActive1 = ''
                                 each val,index in menuBtn1
                                     -if (index == 0){menuActive1 = 'active'}else{menuActive1 = ''}
-                                    li.nav-item.mr-3(class=menuActive1)
+                                    li.nav-item.mr-2(class=menuActive1)
                                         a.co-nav.nav-link(href="#" class="hvr-bounce-in")=val
                 div.hs-ph
                     .row
@@ -40,17 +40,17 @@ header
                                         i.fas.fa-map.co
                                         | 
                                         | Lot 757,Oceam Drive,Bunbury
-                                div.title-p1.text-center.mx-auto
+                                div.title-p1.text-center
                                     span.title-fredreka
                                         | Mike a Reservation
                         .col-lg-2
-                            div.co-icon(class="d-none d-lg-block")
+                            div.co-icon(class="d-none d-lg-flex")
                                 a(href="#")
                                     i.fab.fa-facebook-f.co
                                 a(href="#") 
                                     i.fab.fa-instagram.co
                         .col-lg-1
-                div(class='hagras-nav d-none d-lg-block')
+                div(class='hagras-nav d-none d-lg-flex')
                     nav.navbar.navbar-expand-lg
                         button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExample08", aria-controls="navbarsExample08", aria-expanded="false", aria-label="Toggle navigation")
                             <i class="fas fa-bars"></i>

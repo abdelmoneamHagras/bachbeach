@@ -14,11 +14,11 @@
   src: url(../fonts/Pacifico-Regular.ttf);
 }
 .para-img {
-  top: 10px;
   font-weight: bold;
   color: white;
   padding: 10px 10px;
   width: 200px;
+  max-width: 100%;
   text-align: center;
   border: 2px dotted white;
   background: #223a47;
@@ -100,7 +100,7 @@ a:hover {
   }
 }
 .sec-1 .cont-1 {
-  padding: 50px 0px 0;
+  padding: 25px 0px 0px 0px;
 }
 .sec-1 .cont-1 .res-tell {
   color: black;
@@ -113,11 +113,12 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .sec-1 .cont-1 {
-    padding: 10px 0px 0;
+    padding: 10px 0px 0px 0px;
   }
 }
 .sec-1 .cont-1 .hs-ph .hs-ph-img {
   width: 180px;
+  height: auto;
   max-width: 100%;
 }
 @media screen and (max-width: 992px) {
@@ -146,7 +147,8 @@ a:hover {
 }
 .sec-1 .cont-1 .co-icon {
   font-size: 29px;
-  padding: 63px 0 0 0;
+  align-items: flex-end;
+  height: 100%;
   text-align: center;
 }
 .sec-1 .cont-1 .co-nav {
@@ -240,6 +242,7 @@ a:hover {
 .sec-4 .co-main-img {
   position: relative;
   width: 300px;
+  max-width: 100%;
 }
 .sec-4 .co-main-img .para-1 {
   position: absolute;
@@ -316,6 +319,7 @@ a:hover {
 .sec-c4 .h-read .h-read-1 {
   width: 600px;
   color: #a0cadb;
+  max-width: 100%;
 }
 .sec-c4 .h-read .h-read-2 {
   color: white;
@@ -488,6 +492,7 @@ a:hover {
 .sec-9 .co-sign .hd-main {
   margin-bottom: 73px;
   width: 534px;
+  max-width: 100%;
   margin-left: 148px;
   padding-top: 30px;
 }

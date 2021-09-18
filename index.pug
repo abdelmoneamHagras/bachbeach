@@ -1,13 +1,13 @@
 extends inc/layout.pug
 block content
     section.sec-img-1(class="wow bounceInUp" data-wow-duration="1s")
-        .continer 
+        .container 
             h2(class="title-1").title-fredreka
                 | A Dining Experience
-    section(class="sec-2 wow lightSpeedIn" data-wow-duration="2s" data-wow-delay="2s")
+    section(class="sec-2 wow lightSpeedIn" data-wow-duration="2s" data-wow-delay="1s")
         .container
             .row
-                .col-12.col-md-1.col-lg-12
+                .col-12.col-md-12.col-lg-12
                 -
                     let x = [
                         ['rgb(242, 114, 87)','rgb(93, 160, 170)'],
@@ -15,9 +15,9 @@ block content
                         ['rgb(34, 58, 71)','rgb(242, 114, 87)'],
                     ]
                 each val in x
-                    .col-12.col-md-3.col-lg-4
+                    .col-12.mb-3.col-md-4.col-lg-4
                         +mainImgeCircle1(val[0],val[1])
-                .col-12.col-md-2.col-lg-12
+                .col-12.col-md-12.col-lg-12
     section(class="sec-p")
         .container
             div.welcome-p
@@ -38,8 +38,8 @@ block content
     section.sec-4
         .container
             .row
-                .col-sm-12.col-md-6.col-lg-2
-                .col-sm-12.col-md-6.col-lg-4
+                .col-sm-12.col-md-12.col-lg-2
+                .col-sm-12.col-md-12.col-lg-4
                     div.co-main-img(class="wow rollIn" data-wow-duration="2s" data-wow-delay="0.25s")
                         p.title-fredreka(class="para-1")
                             | whats On
@@ -60,15 +60,15 @@ block content
                 +mainHeading-2('rgb(93, 160, 170)','Served breah','white','from the paddock to the plate')
             div.h-read 
                 .row
-                    .col-sm-12.col-md-1
-                    .col-sm-12.col-md-8
+                    .col-sm-12.col-lg-1
+                    .col-sm-12.col-lg-8
                         p.h-read-1.title-fredreka
                             | There's Only One Place Like The Backbeack Cafe & Restaurent,located on Bunbury's Backbeach With uninterrupted views of crisp White sand and the Indian Ocean. The Perfect Place to eat, ralax and enjoy 
                         p.h-read-2.title-fredreka
                             | We are proud to support local basiness and local producers by courcing as much as possible locally,including fish from Augusta, beet and chicken from Wwestern Austrailia (DBC) Coffee from Yollingup and Wines from Feguson Valley, Margaret River and throghout the South West.
-                    .col-sm-12.col-md-3
+                    .col-sm-12.col-lg-3
                         +mainBtn('rgb(242, 114, 87)',true)
-            div(class="d-none d-md-flex h-img wow bounceInUp")
+            div(class="d-none d-lg-flex h-img wow bounceInUp")
                 .row 
                     .col-2 
                     -
